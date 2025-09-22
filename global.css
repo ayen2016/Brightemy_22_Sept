@@ -1,0 +1,15 @@
+/* Global Fluid Typography */
+html {
+  font-size: clamp(14px, 1.125vw, 16px); /* Slightly smoother scaling */
+}
+
+h1 { font-size: 3.125rem; }   /* ~50px */
+.hero p { font-size: 1.5rem; } /* ~24px */
+h2 { font-size: 2rem; }        /* ~32px */
+h3 { font-size: 1.25rem; }     /* ~20px */
+h4 { font-size: 1.125rem; }    /* ~18px */
+
+/* Paragraph scaling: mobile → desktop */
+p {
+  font-size: clamp(16px, 1.125rem, 18px);
+}
