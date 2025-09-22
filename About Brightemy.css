@@ -1,0 +1,1297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+/*   align-items: center; */
+}
+
+/* <!-- Topbar start --> */
+
+.topbar{
+
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    text-align: left;
+    padding-left: 90px;
+}
+
+
+.topbar_text {
+
+    display: flex;
+    flex-direction: row;
+    color: #efd800;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: left;
+    height: 40px;
+    gap: 65px;
+    text-align: left;
+}
+
+
+.topbar_course:hover {
+
+    color: #000000;
+    cursor: pointer;
+    background-color: #efd800;
+    height:50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding:1px;
+}
+
+
+.topbar_blog:hover{
+
+    color: #000000;
+    cursor: pointer;
+    background-color: #efd800;
+    height:50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding:1px;
+}
+
+
+.topbar_Meet_the_team:hover {
+
+    color: #000000;
+    cursor: pointer;
+    background-color: #efd800;
+    height:50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding:1px;
+}
+
+
+/* <!-- Topbar stop --> */
+
+
+  /* navbar to humberger styling */
+
+/* navbar to humberger styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 0 20px;
+  height: 80px;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 2px 4px rgba(155, 155, 155, 0.5);
+  position: relative;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 80px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* Search container styles */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #efd800;
+}
+
+.search-button {
+  position: absolute;
+  right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+}
+
+.search-result-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: #f9f9f9;
+}
+
+.nav-links {
+  display: flex;
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: right;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: larger;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+/* .nav-links li a:hover {
+  font-size: 25px;
+} */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 999;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+}
+
+/* Responsive styles */
+@media (max-width: 1110px) {
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #efd800;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    /* z-index: 998; previously set  */
+    z-index: 2000;
+  }
+  
+  .nav-links.active {
+
+    margin-top: 6px;
+    max-height: 300px;
+    padding: 15px 0;
+   
+  }
+  
+  .hamburger {
+    display: flex;
+    position: absolute;
+    /* top: 25px; it was 25 before */
+    top: 40px;
+    right: 20px;
+  }
+  
+  /* 👇 Center logo on mobile */
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    order: -1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .nav-links {
+    justify-content: center;
+  }
+  
+  /* Search styles for mobile */
+  .search-container {
+    order: 2;
+    width: 100%;
+    max-width: none;
+    margin: 10px 0 0;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  /* Search results fix for mobile */
+  .search-results {
+    position: fixed;
+    top: auto;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw;
+    margin-top: 80px;
+    /* margin top was 5 px */
+    border-radius: 0;
+    max-height: 50vh;
+  }
+}
+/* <!-- Navbar to hamburger stop--> */
+
+
+/* new search result new search result new search result new search result*/
+
+
+/* Search Results Dropdown */
+#search-results {
+  position: absolute;
+  top: 100%; /* directly below search input */
+  left: 0;
+  width: 100%; /* same width as input */
+  background-color: #fff; /* white background */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-height: 300px; /* scroll if too many results */
+  overflow-y: auto;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  margin: 4px 0 0 0;
+  display: none; /* hidden by default */
+}
+
+/* Each result item */
+#search-results li {
+  list-style: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+#search-results li a {
+  text-decoration: none;
+  color: #000; /* black text */
+  display: block;
+  width: 100%;
+}
+
+#search-results li:hover {
+  background-color: #f0f0f0; /* highlight on hover */
+}
+
+/* Scrollbar styling for modern browsers */
+#search-results::-webkit-scrollbar {
+  width: 8px;
+}
+#search-results::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #search-results {
+    width: 100vw; /* full viewport width */
+    left: 0 !important;
+    border-radius: 0;
+  }
+}
+
+
+/* new search result new search result new search result new search result*/
+
+
+    
+
+
+
+
+/* about section hero container start */
+
+/*  About Page Hero Section */
+
+
+
+        .hero {
+            width: 100%;
+            /* min-height: 100vh; */
+            /* max-height: 600px; */
+            height:600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 50px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 24px;
+            color: #000000;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+
+        .circular-image {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: contain;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 5px solid #ffffff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-text {
+                max-width: 800px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .circular-image {
+                width: 350px;
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-text h1 {
+              margin-top: 20px;
+                font-size: 2.2rem;
+            }
+
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+
+            .circular-image {
+                width: 280px;
+                height: 280px;
+                border-width: 8px;
+            }
+
+             .hero {
+                
+              height: auto;
+          }
+        }
+
+
+
+
+
+/* About page hero section stop */
+
+
+
+/* <!-- course marqee offers start --> */
+
+.course-offers-marquee {
+  
+  width: 100%;
+  overflow: hidden;
+  background-color: #efd800;
+  color: #000;
+  font-weight: 700;
+  font-size: 18px;
+  white-space: nowrap;
+  border-radius: 0px;
+  /* box-shadow: 0 4px 10px rgba(237, 216, 0, 0.6); */
+  padding: 0.75rem 1rem;
+  position: relative;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee-slide 30s linear infinite;
+}
+
+@keyframes marquee-slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1110px) {
+  .course-offers-marquee {
+
+    display: none;
+    font-size: 16px;
+  }
+}
+
+
+/* <!-- course marquee offer stop --> */
+
+
+
+
+/* ---------- Who We Are Section ---------- */
+.who_we_are {
+  width: 100%;
+  padding: 3rem 1.5rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.who_we_are h2 {
+  font-size: 32px;
+  color: #000000;
+  max-width: 1200px;
+}
+
+.who_we_are h3 {
+  font-size: 20px;
+  color: #000000;
+  max-width: 1200px;
+}
+
+.who_we_are p {
+  font-size: 18px;
+  color: #000000;
+  max-width: 1200px;
+  line-height: 1.5;
+  
+}
+
+/* ---------- Values Section ---------- */
+
+
+.about_page_values_section {
+  width: 100%;
+  background-color: #F7F8F9;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_values_section_left_container,
+.about_values_section_right_container {
+  flex: 1 1 420px;
+  padding: 1rem;
+  max-width: 600px;
+}
+
+.about_values_section_left_container img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: block;
+}
+
+.about_values_section_right_container {
+  color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+.about_values_section_right_container h2 {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.about_values_section_right_container p {
+  font-size: 18px;
+  color: #000000;
+  line-height: 1.5;
+  border-left: 4px solid #efd800;
+  padding-left: 1rem;
+  /* background-color: #fefefe; */
+}
+
+
+
+@media (max-width: 768px) {
+
+
+.who_we_are h2 {
+  font-size: 24px;
+}
+
+
+.who_we_are p {
+
+  font-size: 16px;
+
+}
+
+.about_values_section_right_container h2 {
+  font-size: 24px;
+
+}
+
+
+.about_values_section_right_container p {
+  font-size: 16px;
+}
+
+}
+
+/* about section our valuse stop */
+
+
+/* ---------- meet the managers start ---------- */
+
+
+.team-section_managers {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.team-container_managers {
+  max-width: 1200px;
+  margin: 0 auto;   /* centers the container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.team-header_managers h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.team-subtitle_managers {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+/* ==========================
+   Team Members Grid
+   ========================== */
+.team-members_managers {
+  display: grid;
+  grid-template-columns: repeat(3, 300px); /* Always 3 items, 300px each */
+  gap: 40px; 
+  justify-content: center; /* Center grid inside container */
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* ==========================
+   Individual Team Member
+   ========================== */
+.team-member_managers {
+  background-color: #000000;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.team-member_managers:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ==========================
+   Member Photo
+   ========================== */
+.member-photo_managers {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #efd800;
+}
+
+.member-photo_managers img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================
+   Member Name & Role
+   ========================== */
+.member-name_managers {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.member-role_managers {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* ==========================
+   Member Description
+   ========================== */
+.member-description_managers {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* ==========================
+   Social Icons
+   ========================== */
+.member-socials_managers {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-icon_managers {
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #eee;
+  color: #555;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon_managers:hover {
+  color: #fff;
+}
+
+.social-icon_managers.facebook:hover {
+  background-color: #3b5998;
+}
+
+.social-icon_managers.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.social-icon_managers.instagram:hover {
+  background-color: #c13584;
+}
+
+/* ==========================
+   Responsive Adjustments
+   ========================== */
+@media (max-width: 1024px) {
+  .team-header_managers h2 {
+    font-size: 24px;
+  }
+  .team-subtitle_managers {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-members_managers {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+  .team-member_managers {
+    max-width: 100%;
+    padding: 20px;
+  }
+  .member-photo_managers {
+    width: 100px;
+    height: 100px;
+  }
+  .member-description_managers {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-members_managers {
+    grid-template-columns: 1fr; /* 1 per row on phones */
+  }
+  .team-header_managers h2 {
+    font-size: 24px;
+  }
+  .team-subtitle_managers {
+    font-size: 16px;
+  }
+  .member-photo_managers {
+    width: 90px;
+    height: 90px;
+  }
+  .social-icon_managers {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+/* ---------- meet the managers stop ---------- */
+
+
+
+/* ---------- mentor section start ---------- */
+
+
+
+
+
+.team-section {
+  padding: 60px 20px;
+  background-color: #F7F8F9;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;   /* centers the container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.team-header h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.team-header h2 b {
+  color: #000000;
+}
+
+.team-subtitle {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+/* ==========================
+   Team Members Grid
+   ========================== */
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(3, 300px); /* Always 3 items, fixed width */
+  gap: 40px;
+  justify-content: center; /* center the grid */
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* ==========================
+   Individual Team Member
+   ========================== */
+.team-member {
+  background-color: #fff;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ==========================
+   Member Photo
+   ========================== */
+.member-photo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #000000;
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================
+   Member Name & Role
+   ========================== */
+.member-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.member-role {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+/* ==========================
+   Member Description
+   ========================== */
+.member-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ==========================
+   Social Icons
+   ========================== */
+.member-socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-icon {
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #eee;
+  color: #555;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #fff;
+}
+
+.social-icon.facebook:hover {
+  background-color: #3b5998;
+}
+
+.social-icon.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.social-icon.instagram:hover {
+  background-color: #c13584;
+}
+
+/* ==========================
+   Responsive Adjustments
+   ========================== */
+@media (max-width: 1024px) {
+  .team-header h2 {
+    font-size: 24px;
+  }
+  .team-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-members {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+  .team-member {
+    max-width: 100%;
+    padding: 20px;
+  }
+  .member-photo {
+    width: 100px;
+    height: 100px;
+  }
+  .member-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-members {
+    grid-template-columns: 1fr; /* 1 per row on phones */
+  }
+  .team-header h2 {
+    font-size: 24px;
+  }
+  .team-subtitle {
+    font-size: 16px;
+  }
+  .member-photo {
+    width: 90px;
+    height: 90px;
+  }
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .about_values_section_left_container img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
+/* Mentor section stop  */
+
+
+
+/* <!-- Scroll to top button start--> */
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 100;
+  background-color: #000000;
+  color: #EFD800 ;
+  border: 2px solid #EFD800;
+  padding: 10px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: opacity 0.3s, transform 0.3s;
+  /* opacity: 0.8; */
+}
+
+#scrollTopBtn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+/* <!-- Scroll to top button start--> */
+
+
+/* footer start */
+
+.ft {
+  background: #EBEBEB;
+  color: #000;
+  padding: 60px 20px 30px;
+  /* font-family: "Inter", sans-serif; */
+  /* padding-top: 20px;
+  padding-bottom: 10px; */
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+
+.ft-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Paragraphs */
+.ft p {
+  font-size: 15px;
+  color: #000;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Grid Layout - 5 columns */
+.ft-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* Widgets */
+.ft-widget {
+  text-align: left;
+}
+
+.ft-widget h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.ft-widget h5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: #ffd700;
+  border-radius: 2px;
+}
+
+/* Lists */
+.ft-widget ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+.ft-widget ul li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.ft-widget ul li a {
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.ft-widget ul li a i {
+  color: #000000;
+  width: 20px;
+  text-align: center;
+}
+
+.ft-widget ul li a:hover {
+  transform: translateX(4px);
+}
+
+/* Contact icons spacing */
+.ft-widget.contact ul li i {
+  margin-right: 10px;
+  color: #000000;
+  width: auto;
+  flex-shrink: 0;
+}
+
+/* Logo */
+.ft-logo {
+  max-width: 220px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Social Icons */
+.ft-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.ft-social a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a2b44;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.ft-social a:hover {
+  background: #ffd700;
+  color: #0d1a2b;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+/* Newsletter */
+.ft-widget.newsletter p {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.ft-widget.newsletter .newsletter-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.ft-widget.newsletter .newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.ft-widget.newsletter .newsletter-form button {
+  padding: 8px 16px;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 4px;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ft-widget.newsletter .newsletter-form button:hover {
+  background-color: #e6c200;
+  transform: translateY(-2px);
+}
+
+/* Copyright inside footer */
+.ft-copy {
+  /* padding: 20px 15px; */
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .ft-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ft-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ft-widget.newsletter .newsletter-form {
+    flex-direction: column;
+  }
+
+  .ft-widget.newsletter .newsletter-form button {
+    width: 100%;
+  }
+}
+
+
+
+/* footer stop */
+
+
+
