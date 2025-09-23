@@ -1879,7 +1879,8 @@ body {
 .cta-button {
   display: inline-block;
   padding: 14px 40px;   /* more horizontal space */
-  min-width: 200px;     /* ensures a wider button */
+  /* min-width: 200px;  */
+  /* ensures a wider button */
   background-color: #000;
   color: #efd800;
   border-radius: 6px;
@@ -2153,6 +2154,7 @@ body {
 
 
 /* footer stop */
+
 
 
 
